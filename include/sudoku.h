@@ -3,7 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-extern char POSSIBLE;
+extern int UNSOLVED;
+extern int SIZE_ROWS;
+extern int SIZE_COLUMNS;
 
 typedef struct Box
 {
@@ -13,14 +15,18 @@ typedef struct Box
 typedef struct Square 
 {
     int number;
-    char code;
+    int possible[9];
+    int solvable;
     Box * box;
     int row;
     int column;
 } Square;
 
 int ** createPuzzle();
-void printPuzzle();
+void printPuzzle(Square *** puzzle);
+int checkPuzzle(Square *** sudoku);
+int solveSquare(Square * square);
+int updateSudoku(Square *** sudoku, int row, int column);
 Square *** setUpPuzzle(int ** puzzle);
 
 #endif
