@@ -1,6 +1,6 @@
 #include "sudoku.h"
 
-int solveSquare(Square * square)
+int solveSquare(Square *square)
 {
     int x;
 

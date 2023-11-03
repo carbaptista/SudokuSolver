@@ -6,8 +6,8 @@ int SIZE_COLUMNS = 9;
 
 int main()
 {
-    int ** puzzle;
-    Square *** sudoku;
+    int **puzzle;
+    Square ***sudoku;
 
     puzzle = createPuzzle();
 

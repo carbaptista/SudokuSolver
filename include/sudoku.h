@@ -9,24 +9,24 @@ extern int SIZE_COLUMNS;
 
 typedef struct Box
 {
-    struct Box * next;
+    struct Box *next;
 } Box;
 
-typedef struct Square 
+typedef struct Square
 {
     int number;
     int possible[9];
     int solvable;
-    Box * box;
+    Box *box;
     int row;
     int column;
 } Square;
 
-int ** createPuzzle();
-void printPuzzle(Square *** puzzle);
-int checkPuzzle(Square *** sudoku);
-int solveSquare(Square * square);
-int updateSudoku(Square *** sudoku, int row, int column);
-Square *** setUpPuzzle(int ** puzzle);
+int **createPuzzle();
+void printPuzzle(Square ***puzzle);
+int checkPuzzle(Square ***sudoku);
+int solveSquare(Square *square);
+int updateSudoku(Square ***sudoku, int row, int column);
+Square ***setUpPuzzle(int **puzzle);
 
 #endif
